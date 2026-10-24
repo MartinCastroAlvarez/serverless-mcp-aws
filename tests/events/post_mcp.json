@@ -1,0 +1,38 @@
+{
+  "version": "2.0",
+  "routeKey": "ANY /mcp",
+  "rawPath": "/mcp",
+  "rawQueryString": "",
+  "headers": {
+    "accept": "application/json, text/event-stream",
+    "content-length": "141",
+    "content-type": "application/json",
+    "host": "abc123.execute-api.us-east-1.amazonaws.com",
+    "mcp-protocol-version": "2025-11-25",
+    "user-agent": "python-httpx/0.28.1",
+    "x-amzn-trace-id": "Root=1-6718f2a1-0b1c2d3e4f5a6b7c8d9e0f1a",
+    "x-forwarded-for": "203.0.113.7",
+    "x-forwarded-port": "443",
+    "x-forwarded-proto": "https"
+  },
+  "requestContext": {
+    "accountId": "000000000000",
+    "apiId": "abc123",
+    "domainName": "abc123.execute-api.us-east-1.amazonaws.com",
+    "domainPrefix": "abc123",
+    "http": {
+      "method": "POST",
+      "path": "/mcp",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "203.0.113.7",
+      "userAgent": "python-httpx/0.28.1"
+    },
+    "requestId": "Ab1CdEfGhIjKlMn=",
+    "routeKey": "ANY /mcp",
+    "stage": "$default",
+    "time": "24/Oct/2026:10:00:00 +0000",
+    "timeEpoch": 1792836000000
+  },
+  "body": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2025-11-25\",\"capabilities\":{},\"clientInfo\":{\"name\":\"curl\",\"version\":\"1\"}}}",
+  "isBase64Encoded": false
+}

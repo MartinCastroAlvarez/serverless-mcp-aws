@@ -1,0 +1,24 @@
+{
+  "version": "2.0",
+  "type": "REQUEST",
+  "routeArn": "arn:aws:execute-api:us-east-1:000000000000:abc123/$default/POST/mcp",
+  "identitySource": ["Bearer TOKEN"],
+  "routeKey": "ANY /mcp",
+  "rawPath": "/mcp",
+  "rawQueryString": "",
+  "headers": {
+    "authorization": "Bearer TOKEN",
+    "content-type": "application/json",
+    "host": "abc123.execute-api.us-east-1.amazonaws.com"
+  },
+  "requestContext": {
+    "accountId": "000000000000",
+    "apiId": "abc123",
+    "domainName": "abc123.execute-api.us-east-1.amazonaws.com",
+    "http": {"method": "POST", "path": "/mcp", "protocol": "HTTP/1.1", "sourceIp": "203.0.113.7", "userAgent": "curl/8"},
+    "requestId": "Ab1CdEfGhIjKlMn=",
+    "routeKey": "ANY /mcp",
+    "stage": "$default",
+    "timeEpoch": 1792836000000
+  }
+}

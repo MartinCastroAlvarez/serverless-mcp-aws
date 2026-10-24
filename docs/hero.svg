@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f59e0b"/>
+    </marker>
+    <style>
+      .title { font: 700 64px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #f8fafc; }
+      .pitch { font: 400 26px 'Inter', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #cbd5e1; }
+      .box { fill: #111a33; stroke: #334155; stroke-width: 2; rx: 14; }
+      .hot { fill: #111a33; stroke: #f59e0b; stroke-width: 3; rx: 14; }
+      .label { font: 600 24px 'Inter', 'Segoe UI', Arial, sans-serif; fill: #f8fafc; }
+      .sub { font: 400 17px 'JetBrains Mono', 'Menlo', 'Consolas', monospace; fill: #94a3b8; }
+      .accent { fill: #f59e0b; }
+      .chip { font: 500 17px 'JetBrains Mono', 'Menlo', 'Consolas', monospace; fill: #f59e0b; }
+      .line { stroke: #f59e0b; stroke-width: 3; fill: none; }
+      .foot { font: 400 19px 'Inter', 'Segoe UI', Arial, sans-serif; fill: #64748b; }
+    </style>
+  </defs>
+  <rect width="1280" height="640" fill="#0b1020"/>
+  <rect x="80" y="86" width="10" height="70" class="accent"/>
+  <text x="112" y="146" class="title">serverless-mcp-aws</text>
+  <text x="112" y="196" class="pitch">MCP servers on AWS Lambda + API Gateway: stateless Streamable HTTP,</text>
+  <text x="112" y="232" class="pitch">JWT bearer auth, per-scope tool allowlists and a CDK construct.</text>
+
+  <!-- client -->
+  <rect x="80" y="320" width="220" height="150" class="box"/>
+  <text x="190" y="378" class="label" text-anchor="middle">MCP client</text>
+  <text x="190" y="410" class="sub" text-anchor="middle">Claude Code,</text>
+  <text x="190" y="434" class="sub" text-anchor="middle">agents, SDKs</text>
+
+  <!-- api gateway -->
+  <rect x="370" y="320" width="230" height="150" class="box"/>
+  <text x="485" y="370" class="label" text-anchor="middle">API Gateway</text>
+  <text x="485" y="402" class="sub" text-anchor="middle">HTTP API</text>
+  <text x="485" y="426" class="sub" text-anchor="middle">throttled stage</text>
+  <text x="485" y="450" class="sub" text-anchor="middle">opt. authorizer</text>
+
+  <!-- lambda -->
+  <rect x="670" y="278" width="330" height="234" class="hot"/>
+  <text x="835" y="322" class="label" text-anchor="middle">Lambda handler</text>
+  <text x="700" y="374" class="chip">Origin allowlist</text>
+  <text x="700" y="402" class="chip">JWT RS256/ES256 + JWKS</text>
+  <text x="700" y="430" class="chip">scopes → tools</text>
+  <text x="700" y="458" class="chip">mcp SDK, stateless</text>
+  <text x="700" y="486" class="chip">/.well-known metadata</text>
+
+  <!-- tools -->
+  <rect x="1070" y="320" width="150" height="150" class="box"/>
+  <text x="1145" y="380" class="label" text-anchor="middle">tools</text>
+  <text x="1145" y="412" class="sub" text-anchor="middle">S3, APIs</text>
+  <text x="1145" y="436" class="sub" text-anchor="middle">own IAM role</text>
+
+  <line x1="300" y1="395" x2="364" y2="395" class="line" marker-end="url(#arrow)"/>
+  <line x1="600" y1="395" x2="664" y2="395" class="line" marker-end="url(#arrow)"/>
+  <line x1="1000" y1="395" x2="1064" y2="395" class="line" marker-end="url(#arrow)"/>
+  <text x="332" y="380" class="sub" text-anchor="middle">POST</text>
+
+  <text x="80" y="580" class="foot">Bearer token stops at the handler · no sessions · 1-day logs · least-privilege IAM · runs 100% locally for tests</text>
+</svg>
